@@ -70,7 +70,7 @@ void setup() {
   gfx->drawRect(0 ,0 , 320, 240 , WHITE);
 
   gfx->setTextSize(1);
-  gfx->setTextColor(WHITE);
+  gfx->setTextColor(contrastColour);
   gfx->setCursor(120, 225);
   gfx->print("Code by Aalok");
 
@@ -80,7 +80,7 @@ void setup() {
   gfx->print("Welcome To");
 
   gfx->setTextSize(5);
-  gfx->setTextColor(WHITE);
+  gfx->setTextColor(contrastColour);
   gfx->setCursor(71, 114);
   gfx->print("CANVAS");
 
