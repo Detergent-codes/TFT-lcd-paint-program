@@ -1,13 +1,22 @@
+/*
+ Advnced paint program for a 2.4 inch tft panel shield specifically
+ designed for the Arduino UNO R4.
+
+ And i know this code can be a lot more optimized for this use case,
+ but im new to arduino and i tried my best.
+
+ Code by Aalok
+*/
+
 #include <Arduino_GFX_Library.h>
 #include <TouchScreen.h>
 
 //Configure Settings
  #define brushSize   3               //Thickness of the drawn line
- #define defaultColour RED           //Default pen colour on startup
  #define canvasColour   BLACK        //Colour of the drawing canvas
  #define contrastColour   WHITE      //Colour of text, lines, etc.Must be different than background colour
  #define seperatorProtectMargin   33 //Makes sure that the seperator line does not get painted over, Keep 33 for brush sizes 3 or under 3
- #define clearTimerLimit 2000        //Time in milliseconds before the "Sure?" button resets
+ #define clearTimerLimit   2000        //Time in milliseconds before the "Sure?" button resets
  #define sureMessageColour   RED     //Colour of the confirmation message after clicking the clear canvas button
 
 // Color Definitions
@@ -152,7 +161,7 @@ void loop() {
       }
 
         // First touch point: draw a small filled square
-        gfx->fillRect(x - brushSize, y - brushSize, brushSize, brushSize, defaultColour);
+        gfx->fillRect(x - brushSize, y - brushSize, brushSize, brushSize, currentColor);
     }
   }
 }
